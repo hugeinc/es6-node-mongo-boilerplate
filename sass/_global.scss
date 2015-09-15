@@ -1,0 +1,112 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.outer {
+	height: 100%;
+	@include outer-container();
+
+	@include media($medium) {
+		@include outer-container();
+	}
+
+	@include media($small) {
+		@include outer-container(90%);
+	}
+}
+
+.wrapper {
+	$grid-columns: 12;
+	@include span-columns(12 of 14);
+	float: none;
+	height: 100%;
+	margin: 0 auto;
+
+	&:last-child {
+		margin-right: auto;
+	}
+
+	.lg-three-col {
+		@include span-columns(3);
+	}
+
+	.lg-nine-col {
+		@include span-columns(9);
+	}
+
+	.lg-twelve-col {
+		@include span-columns(12);
+	}
+
+	.style-element {
+		cursor: pointer;
+	}
+
+	@include media($medium) {
+		$grid-columns: 9;
+		@include span-columns(9 of 11);
+		float: none;
+
+		&:last-child {
+			margin-right: auto;
+		}
+
+		.med-two-col {
+			@include span-columns(2);
+		}
+
+		.med-seven-col {
+			@include span-columns(7);
+		}
+
+		.med-nine-col {
+			@include span-columns(9);
+		}
+	}
+
+	@include media($small) {
+		@include span-columns(6 of 6);
+		float: none;
+
+		&:last-child {
+			margin-right: auto;
+		}
+
+		.one-col {
+			@include span-columns(1);
+		}
+
+		.two-col {
+			@include span-columns(2);
+		}
+
+		.three-col {
+			@include span-columns(3);
+		}
+
+		.four-col {
+			@include span-columns(4);
+		}
+
+		.small-no-gutter {
+			margin-right: 0;
+		}
+	}
+
+
+}

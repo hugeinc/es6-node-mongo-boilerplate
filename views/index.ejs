@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/public/Includes/css/styles.css">
+	</head>
+	<body>
+		<div class="outer">
+			<div class="wrapper">
+				<%- include _partials/nav.ejs %>
+				<section class="col lg-twelve-col med-nine-col">
+					<% if (data.page == 'default') { %>
+						<%- include _pages/default.ejs %>
+					<% } else if (data.page == 'pagename') { %>
+						<%- include _pages/pagename.ejs %>
+					<% } %>
+				</section>
+			</div>
+		</div>
+		<script type="text/javascript" src="/public/Includes/scripts/app.js" async></script>
+	</body>
+</html>

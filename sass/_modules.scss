@@ -1,0 +1,9 @@
+//module styles
+
+.module {
+	@include fill-parent();
+	@include row();
+	border-bottom: $black-type 1px solid;
+	padding: 40px 0;
+	position: relative;
+}
