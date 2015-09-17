@@ -31,6 +31,9 @@ installation:
 `npm install -g forever` or
 `npm install -g nodemon`
 
+to run MongoDB:
+`mongod --config=db/mongo.conf`
+
 to run the server:
 `nodemon index.js` will keep an open task (good for development) or
 `forever start index.js` will spawn a daemon (good for production)
