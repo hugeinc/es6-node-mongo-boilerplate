@@ -2407,21 +2407,21 @@ var Sample = (function () {
 		};
 
 		var selectors = {
+			wrapper: '.sample',
 			button: '.button'
 		};
 
 		var objects = {
+			wrapper: $(selectors.wrapper),
 			button: $(selectors.button)
 		};
 
-		var apiResponseHandler = function apiResponseHandler(res) {
-			res = JSON.parse(res);
-			//do something with api response
-		};
+		var apiResponseHandler = function apiResponseHandler(res) {};
 
 		var buttonClickHandler = function buttonClickHandler(e) {
-			params = {};
-			utils.loadUrl(constants.apiUrl, 'POST', params, true, apiResponseHandler);
+			var params = {};
+			//utils.loadUrl(constants.apiUrl, 'POST', params, true, apiResponseHandler);
+			objects.wrapper.append('It works!');
 		};
 
 		this.start = function () {
@@ -2447,6 +2447,9 @@ var Sample = (function () {
 
 exports['default'] = Sample;
 module.exports = exports['default'];
+
+//res = JSON.parse(res);
+//do something with api response
 
 },{}],6:[function(require,module,exports){
 'use strict';

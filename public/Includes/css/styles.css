@@ -1,12 +1,12 @@
-/* line 4, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_box-sizing.scss */
+/* line 4, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
 
-/* line 11, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_box-sizing.scss */
+/* line 11, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_box-sizing.scss */
 *, *::after, *::before {
   box-sizing: inherit; }
 
-/* line 1, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+/* line 1, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
 html, body {
   height: 100%;
   margin: 0;
@@ -15,23 +15,23 @@ html, body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important; }
 
-/* line 10, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+/* line 10, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 16, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+/* line 16, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
 ::-webkit-scrollbar {
   width: 0; }
 
-/* line 20, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+/* line 20, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
 .outer {
   height: 100%;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  /* line 20, /Users/jjacobs/Documents/projects/es6-sass-gulp/bourbon/addons/_clearfix.scss */
+  /* line 20, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/bourbon/addons/_clearfix.scss */
   .outer::after {
     clear: both;
     content: "";
@@ -41,7 +41,7 @@ html, body {
       max-width: 100%;
       margin-left: auto;
       margin-right: auto; }
-      /* line 20, /Users/jjacobs/Documents/projects/es6-sass-gulp/bourbon/addons/_clearfix.scss */
+      /* line 20, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/bourbon/addons/_clearfix.scss */
       .outer::after {
         clear: both;
         content: "";
@@ -51,13 +51,13 @@ html, body {
       max-width: 90%;
       margin-left: auto;
       margin-right: auto; }
-      /* line 20, /Users/jjacobs/Documents/projects/es6-sass-gulp/bourbon/addons/_clearfix.scss */
+      /* line 20, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/bourbon/addons/_clearfix.scss */
       .outer::after {
         clear: both;
         content: "";
         display: table; } }
 
-/* line 33, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+/* line 33, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
 .wrapper {
   float: left;
   display: block;
@@ -66,42 +66,45 @@ html, body {
   float: none;
   height: 100%;
   margin: 0 auto; }
-  /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+  /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
   .wrapper:last-child {
     margin-right: 0; }
-  /* line 40, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+  /* line 40, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
   .wrapper:last-child {
     margin-right: auto; }
-  /* line 44, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+  /* line 44, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
   .wrapper .lg-three-col {
     float: left;
     display: block;
     margin-right: 3.60825%;
     width: 22.29381%; }
-    /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+    /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
     .wrapper .lg-three-col:last-child {
       margin-right: 0; }
-  /* line 48, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+  /* line 48, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
   .wrapper .lg-nine-col {
     float: left;
     display: block;
     margin-right: 3.60825%;
     width: 74.09794%; }
-    /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+    /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
     .wrapper .lg-nine-col:last-child {
       margin-right: 0; }
-  /* line 52, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+  /* line 52, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
   .wrapper .lg-twelve-col {
     float: left;
     display: block;
     margin-right: 3.60825%;
     width: 100%; }
-    /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+    /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
     .wrapper .lg-twelve-col:last-child {
       margin-right: 0; }
-  /* line 56, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+  /* line 56, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
   .wrapper .style-element {
     cursor: pointer; }
+  /* line 60, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
+  .wrapper .button {
+    margin: 20px; }
   @media screen and (max-width: 1024px)  {
     .wrapper {
       float: left;
@@ -109,37 +112,37 @@ html, body {
       margin-right: 3.94922%;
       width: 81.10014%;
       float: none; }
-      /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+      /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
       .wrapper:last-child {
         margin-right: 0; }
-      /* line 65, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 70, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper:last-child {
         margin-right: auto; }
-      /* line 69, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 74, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .med-two-col {
         float: left;
         display: block;
         margin-right: 4.86957%;
         width: 18.43478%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .med-two-col:last-child {
           margin-right: 0; }
-      /* line 73, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 78, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .med-seven-col {
         float: left;
         display: block;
         margin-right: 4.86957%;
         width: 76.69565%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .med-seven-col:last-child {
           margin-right: 0; }
-      /* line 77, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 82, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .med-nine-col {
         float: left;
         display: block;
         margin-right: 4.86957%;
         width: 100%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .med-nine-col:last-child {
           margin-right: 0; } }
   @media screen and (max-width: 768px)  {
@@ -149,60 +152,60 @@ html, body {
       margin-right: 7.48663%;
       width: 100%;
       float: none; }
-      /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+      /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
       .wrapper:last-child {
         margin-right: 0; }
-      /* line 86, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 91, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper:last-child {
         margin-right: auto; }
-      /* line 90, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 95, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .one-col {
         float: left;
         display: block;
         margin-right: 7.48663%;
         width: 10.42781%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .one-col:last-child {
           margin-right: 0; }
-      /* line 94, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 99, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .two-col {
         float: left;
         display: block;
         margin-right: 7.48663%;
         width: 28.34225%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .two-col:last-child {
           margin-right: 0; }
-      /* line 98, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 103, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .three-col {
         float: left;
         display: block;
         margin-right: 7.48663%;
         width: 46.25668%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .three-col:last-child {
           margin-right: 0; }
-      /* line 102, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 107, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .four-col {
         float: left;
         display: block;
         margin-right: 7.48663%;
         width: 64.17112%; }
-        /* line 89, /Users/jjacobs/Documents/projects/es6-sass-gulp/neat/grid/_span-columns.scss */
+        /* line 89, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/neat/grid/_span-columns.scss */
         .wrapper .four-col:last-child {
           margin-right: 0; }
-      /* line 106, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_global.scss */
+      /* line 111, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_global.scss */
       .wrapper .small-no-gutter {
         margin-right: 0; } }
 
-/* line 3, /Users/jjacobs/Documents/projects/es6-sass-gulp/sass/_modules.scss */
+/* line 3, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/sass/_modules.scss */
 .module {
   width: 100%;
   display: block;
   border-bottom: #000000 1px solid;
   padding: 40px 0;
   position: relative; }
-  /* line 20, /Users/jjacobs/Documents/projects/es6-sass-gulp/bourbon/addons/_clearfix.scss */
+  /* line 20, /Users/jjacobs/Documents/projects/es6-node-mongo-boilerplate/bourbon/addons/_clearfix.scss */
   .module::after {
     clear: both;
     content: "";

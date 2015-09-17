@@ -7,21 +7,24 @@ class Sample {
 		};
 
 		let selectors = {
+			wrapper: '.sample',
 			button: '.button'
 		};
 
 		let objects = {
+			wrapper: $(selectors.wrapper),
 			button: $(selectors.button)
 		};
 
 		let apiResponseHandler = function(res) {
-			res = JSON.parse(res);
+			//res = JSON.parse(res);
 			//do something with api response
 		};
 
 		let buttonClickHandler = function(e) {
-			params = {};
-			utils.loadUrl(constants.apiUrl, 'POST', params, true, apiResponseHandler);
+			var params = {};
+			//utils.loadUrl(constants.apiUrl, 'POST', params, true, apiResponseHandler);
+			objects.wrapper.append('It works!');
 		};
 
 		this.start = function() {

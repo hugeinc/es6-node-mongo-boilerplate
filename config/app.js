@@ -5,7 +5,7 @@ exports.dev = {
   db: 'mongodb://localhost/store',
   ports: {
     mongo: 27017,
-    server: 9001
+    server: 8002
   }
 };
 

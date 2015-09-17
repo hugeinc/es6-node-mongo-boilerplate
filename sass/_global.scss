@@ -57,6 +57,11 @@ html, body {
 		cursor: pointer;
 	}
 
+	.button {
+		margin: 20px;
+		
+	}
+
 	@include media($medium) {
 		$grid-columns: 9;
 		@include span-columns(9 of 11);

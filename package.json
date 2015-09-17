@@ -1,6 +1,6 @@
 {
   "name": "es6-node-mongo",
-  "version": "1.0",
+  "version": "0.0.9",
   "description": "ES6 Front-End Boilerplate on Node.js with MongoDB",
   "main": "index.js",
   "author": "Jayson Jacobs <jjacobs@hugeinc.com>",
