@@ -124,7 +124,7 @@ var vhosts = {
     },
     prod: {
         virtualdomain: 'virtualdomain.com',
-        virtualdomain: 'virtualdomainalt.com'
+        virtualdomainalt: 'virtualdomainalt.com'
     }
 };
 
