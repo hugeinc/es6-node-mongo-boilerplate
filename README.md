@@ -1,5 +1,5 @@
 # es6-sass-gulp
-Boilerplate: [ES6 Front End](http://es6-features.org/), [Sass](http://sass-lang.com/) (with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)), [Gulp](http://gulpjs.com/), [Karma/Jasmine](https://www.npmjs.com/package/karma-jasmine)/[Jasmine jQuery](https://github.com/bessdsv/karma-jasmine-jquery), [Node.js](https://nodejs.org/en/), [Express](http://expressjs.com/), [MongoDB](https://www.mongodb.org/)
+Boilerplate: [ES6 Front End](http://es6-features.org/), [Sass](http://sass-lang.com/) (with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)), [Gulp](http://gulpjs.com/), [Karma/Jasmine](https://www.npmjs.com/package/karma-jasmine)/[Jasmine jQuery](https://github.com/bessdsv/karma-jasmine-jquery), [Node.js](https://nodejs.org/en/), [Express](http://expressjs.com/), [express-vhost](https://www.npmjs.com/package/express-vhost), [MongoDB](https://www.mongodb.org/)
 
 _by Jayson Jacobs_
 
@@ -47,6 +47,21 @@ run task `gulp` for development compilation.
 run task `karma start` for testing.
 
 default url: http://localhost:8001
+
+### virtual hosts
+
+Look in /index.js for vhost configuration.
+
+make sure you have local virtual domains forwarded to 127.0.0.1 for development.
+
+i.e.
+
+127.0.0.1	virtualdomain.local
+
+127.0.0.1	virtualdomainalt.local
+
+
+in /etc/hosts
 
 ## Production info
 To run on a remote server, use the following task.
