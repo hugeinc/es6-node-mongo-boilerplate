@@ -1,5 +1,5 @@
 var mongoose = require( 'mongoose' );
-var Race = mongoose.model( 'Site' );
+var Site = mongoose.model( 'Site' );
 var Response = require( __dirname + '/../lib/Response' );
 var Dispatcher = require( __dirname + '/../lib/Dispatcher' );
 
