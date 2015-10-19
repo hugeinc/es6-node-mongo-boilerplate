@@ -45,7 +45,7 @@ mongoose.connection.on('disconnected', function () {
 
 // vhosts
 
-var createServer = function(name, models, views, routes) {
+var createServer = function(name, models, views, routes, db) {
     var svr = express();
 
     //configure server
@@ -63,8 +63,14 @@ var createServer = function(name, models, views, routes) {
     svr.set('views', __dirname+'/views/'+views);
     svr.set('view engine', 'ejs');
 
+    //configure database connection
+    var conn;
+    if(db) {
+        conn = mongoose.createConnection('mongodb://localhost/'+name);
+    }
+
     //apply routes
-    require( __dirname + '/config/'+routes+'/routes')(svr);
+    require( __dirname + '/config/'+routes+'/routes')(svr, conn, name);
 
     return svr;
 };
@@ -106,6 +112,7 @@ server.listen(config.ports.server, function() {
     models = models dir (/models/[models name]/[your files here])
     views = views dir (/views/[views name]/[your files here])
     routes = routes dir (/config/[routes name]/routes.js)*
+    db = enable database connection to [name] database specified previously (true/false)
 
     this can allow easy sharing of logic between applications if necessary.
 
@@ -128,8 +135,8 @@ var vhosts = {
     }
 };
 
-// var vdomain = createServer('virtualdomain', 'virtualdomain', 'virtualdomain', 'virtualdomain');
-// var vdomainalt = createServer('virtualdomain', 'virtualdomain', 'virtualdomain', 'virtualdomainalt'); //same logic as vdomain, but different routes
+// var vdomain = createServer('virtualdomain', 'virtualdomain', 'virtualdomain', 'virtualdomain', true);
+// var vdomainalt = createServer('virtualdomain', 'virtualdomain', 'virtualdomain', 'virtualdomainalt', true); //same logic as vdomain, but different routes
 //
 // evh.register(vhosts[env].virtualdomain, vdomain);
 // evh.register(vhosts[env].virtualdomainalt, vdomainalt);
