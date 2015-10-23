@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     browserify = require('gulp-browserify2'),
@@ -9,7 +10,8 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
     sourcemaps = require('gulp-sourcemaps'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    webpack = require('webpack');
 
 //PRODUCTION TASKS
 
@@ -49,49 +51,76 @@ gulp.task('production', [
 
 //DEVELOPMENT TASKS
 
-gulp.task('lint', function () {
-    gulp.src('./js/*.es6.js')
-        .pipe(jshint({
-        	esnext: true,
-			expr: true,
-            jquery: true
-            }))
-        .pipe(jshint.reporter('default'))
-        .pipe(jshint.reporter('fail'));
+//WEBPACK
+
+var webpackInit = function(input, output) {
+    var webpackConfig = require('./webpack.config.js')(input, output);
+    var webpackConfigDev = Object.create(webpackConfig);
+    webpackConfigDev.devtool = 'sourcemap';
+    webpackConfigDev.debug = true;
+
+    return webpack(webpackConfigDev);
+};
+
+var webpackRun = function(cmplr, callback, subdir) {
+    cmplr.run(function(err, stats) {
+        if(err) throw new gutil.PluginError('webpack:build-dev', err);
+        gutil.log('[webpack-build-dev-'+subdir+']', stats.toString({
+            colors: true
+        }));
+        callback();
+    });
+};
+
+var lintTask = function(input) {
+    return function() {
+        gulp.src(input)
+            .pipe(jshint({
+            	esnext: true,
+    			expr: true,
+                jquery: true
+                }))
+            .pipe(jshint.reporter('default'));
+    }
+};
+
+var sassTask = function(input, output) {
+    return function() {
+        gulp.src(input)
+    		.pipe(sass({
+    			style: 'expanded',
+    			sourceComments: 'normal'
+    		}))
+    		.pipe(gulp.dest(output));
+    }
+};
+
+var dynamicTasks = function(subdir) {
+    //javascript compile task
+    var devCompiler = webpackInit('./js/'+subdir+'/app.es6.js', './public/'+subdir+'/Includes/scripts');
+    gulp.task('webpack-build-dev-'+subdir, function(callback) {
+        webpackRun(devCompiler, callback, subdir);
+    });
+    //javascript lint task
+    gulp.task('lint-'+subdir, lintTask('./js/'+subdir+'/**/*.es6.js'));
+    //watch tasks just created
+    gulp.watch(['./js/'+subdir+'/**/*.es6.js'], ['lint-'+subdir, 'webpack-build-dev-'+subdir]);
+
+    //css
+    //new task for compiling sass
+    gulp.task('sass-'+subdir, sassTask('./sass/'+subdir+'/**/*.scss', './public/'+subdir+'/Includes/css'));
+    //watch task just created
+    gulp.watch(['./sass/'+subdir+'/**/*.scss'], ['sass-'+subdir]);
+
+    //run tasks just composed
+    gulp.start('sass-'+subdir, 'webpack-build-dev-'+subdir);
+};
+
+gulp.task('webpack-watch', function() {
+    //tasks for virtual hosts
+    dynamicTasks('virtualdomain');
+    //tasks for root
+    dynamicTasks('root');
 });
 
-gulp.task('transpile', function() {
-	gulp.src('./js/app.es6.js')
-	.pipe(browserify({
-        fileName: 'app.js',
-        transform: {
-            tr: babelify,
-            options: {
-                loose: ['es6.modules']
-            }
-        },
-        options: {
-            debug: true
-        }
-    }))
-	.pipe(buffer())
-	.pipe(sourcemaps.init({ loadMaps: true }))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest('./public/Includes/scripts'));
-});
-
-gulp.task('sass', function() {
-	gulp.src('./sass/**/*.scss')
-		.pipe(sass({
-			style: 'expanded',
-			sourceComments: 'normal'
-		}))
-		.pipe(gulp.dest('./public/Includes/css'))
-});
-
-gulp.task('watch', function() {
-	gulp.watch(['./js/**/*.es6.js'], ['lint','transpile']);
-	gulp.watch(['./sass/**/*.scss'], ['sass']);
-});
-
-gulp.task('default', ['transpile', 'sass', 'watch']);
+gulp.task('default', ['webpack-watch']);

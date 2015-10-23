@@ -21,7 +21,7 @@ var connect = function () {
       socketOptions: { keepAlive: 1 }
     }
   };
-  mongoose.connect(config.db, options);
+  mongoose.connect(config.db+'root', options);
 };
 if(mongoEnabled){
     connect();
@@ -66,7 +66,7 @@ var createServer = function(name, models, views, routes, db) {
     //configure database connection
     var conn;
     if(db) {
-        conn = mongoose.createConnection('mongodb://localhost/'+name);
+        conn = mongoose.createConnection(config.db+name);
     }
 
     //apply routes
@@ -83,7 +83,7 @@ server.use(evh.vhost(app.enabled('trust proxy')));
 // configure server
 server.use(express.bodyParser());
 server.use(express.compress());
-server.use('/public', express.static(__dirname + '/public'));
+server.use('/public', express.static(__dirname + '/public/root'));
 
 // load models
 var models_path = __dirname + '/models'
@@ -92,7 +92,7 @@ fs.readdirSync(models_path).forEach(function (file) {
 });
 
 //set views, view engine
-server.set( 'views', __dirname + '/views' );
+server.set( 'views', __dirname + '/views/root' );
 server.set( 'view engine', 'ejs' );
 
 // apply routes
