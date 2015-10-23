@@ -1,4 +1,4 @@
-# es6-sass-gulp
+# Webpack/ES6 - Node/Express - MongoDB
 Boilerplate: [ES6 Front End](http://es6-features.org/) utilizing [Webpack](http://webpack.github.io/docs/), [Sass](http://sass-lang.com/) (with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)), [Gulp](http://gulpjs.com/), [Karma/Jasmine](https://www.npmjs.com/package/karma-jasmine)/[Jasmine jQuery](https://github.com/bessdsv/karma-jasmine-jquery), [Node.js](https://nodejs.org/en/), [Express](http://expressjs.com/), [express-vhost](https://www.npmjs.com/package/express-vhost), [MongoDB](https://www.mongodb.org/)
 
 _by Jayson Jacobs_
