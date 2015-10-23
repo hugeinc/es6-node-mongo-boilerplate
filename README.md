@@ -1,5 +1,5 @@
 # es6-sass-gulp
-Boilerplate: [ES6 Front End](http://es6-features.org/), [Sass](http://sass-lang.com/) (with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)), [Gulp](http://gulpjs.com/), [Karma/Jasmine](https://www.npmjs.com/package/karma-jasmine)/[Jasmine jQuery](https://github.com/bessdsv/karma-jasmine-jquery), [Node.js](https://nodejs.org/en/), [Express](http://expressjs.com/), [express-vhost](https://www.npmjs.com/package/express-vhost), [MongoDB](https://www.mongodb.org/)
+Boilerplate: [ES6 Front End](http://es6-features.org/) utilizing [Webpack](http://webpack.github.io/docs/), [Sass](http://sass-lang.com/) (with [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)), [Gulp](http://gulpjs.com/), [Karma/Jasmine](https://www.npmjs.com/package/karma-jasmine)/[Jasmine jQuery](https://github.com/bessdsv/karma-jasmine-jquery), [Node.js](https://nodejs.org/en/), [Express](http://expressjs.com/), [express-vhost](https://www.npmjs.com/package/express-vhost), [MongoDB](https://www.mongodb.org/)
 
 _by Jayson Jacobs_
 
@@ -8,6 +8,8 @@ _by Jayson Jacobs_
 `npm install -g gulp`
 
 `npm install -g karma-cli`
+
+`npm install -g webpack`
 
 `npm i`
 
@@ -51,6 +53,11 @@ default url: http://localhost:8001
 ### virtual hosts
 
 Look in /index.js for vhost configuration.
+
+You'll need to add new tasks in gulpfile.js for front-end compilation
+
+i.e.
+`dynamicTasks('virtualdomain');`
 
 make sure you have local virtual domains forwarded to 127.0.0.1 for development.
 
