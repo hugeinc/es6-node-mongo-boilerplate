@@ -23,7 +23,7 @@ _by Jayson Jacobs_
 
 `neat install`
 
-(you might need to use sudo for some of the above commands)
+(you might need to use `sudo` for some of the above commands)
 
 ### Usage
 
